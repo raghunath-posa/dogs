@@ -1,0 +1,18 @@
+%YAML 1.1
+
+---
+applications:
+- name: dogs
+  host: dogs
+  domain: acme.com
+  buildpack: java_buildpack
+  instances: 1
+  memory: 512M
+  path: target/dogs-0.0.1-SNAPSHOT.jar
+  env:
+    APP_NAME: dogs
+    APP_VERSION: v1
+    JBP_CONFIG_JMX: '{enabled: true}'
+    JBP_CONFIG_OPEN_JDK_JRE: '[jre: {version: 1.8.0_+}, memory_calculator: {memory_heuristics: {heap: 64, stack: 5, metaspace: 6, native: 25}}]'
+    JBP_CONFIG_JAVA_OPTS: '[ java_opts: "-verbose:gc -XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Xloggc:./jvm-gc.log -XX:NativeMemoryTracking=detail" ]'
+    IS_MEMORY_DUMP: true
