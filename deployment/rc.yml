@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: dogs-rc
+spec:
+  replicas: 2
+  selector:
+    app: dogs
+  template:
+    metadata:
+      labels:
+        app: dogs
+    spec:
+      containers:
+      - name: dogs-car
+        image: springio/dogs:latest
+        ports:
+        - containerPort: 8080

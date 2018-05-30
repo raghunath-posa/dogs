@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dogs
+spec:
+  containers:
+  - name: dogs
+    image: localhost:5000/posalabs/dogs:latest
+    imagePullPolicy: Never
+    ports:
+    - containerPort: 8080

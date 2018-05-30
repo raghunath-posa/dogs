@@ -18,7 +18,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-      <docker.image.prefix>springio</docker.image.prefix>
+      <docker.image.prefix>posalabs</docker.image.prefix>
   </properties>
 
     <build>
