@@ -7,5 +7,5 @@ ADD ${JAR_FILE} dogs.jar
 
 ENTRYPOINT ["/usr/bin/java", "-jar", "/dogs.jar"]
 
-EXPOSE 8080
+EXPOSE 8090
 

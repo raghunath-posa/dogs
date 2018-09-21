@@ -9,6 +9,7 @@ In order to build this project just run:
 ## Run Locally
 
 	mvn spring-boot:run
+	mvn clean install spring-boot:run -Dserver.port=8090
 
 ## Create Docker Image
 

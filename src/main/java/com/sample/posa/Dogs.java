@@ -101,70 +101,48 @@ class Dog {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
-    String name;
-    String description;
-    String condition;
-    Double latitude;
-    Double longitude;
+    String firstName;
+    String lastName;
+    int age;
 
     public Dog() { }
 
-    public Dog(Long id, String name, String description, String condition, 
-               Double latitude, Double longitude) {
+    public Dog(Long id, String firstName, String lastName, int age) {
         this.id = id;
-        this.name = name;
-        this.description = description;
-        this.condition = condition;
-        this.latitude = latitude;
-        this.longitude = longitude;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
     }
 
     public Long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(final Long id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(final String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getDescription() {
-        return description;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setLastName(final String lastName) {
+        this.lastName = lastName;
     }
 
-    public String getCondition() {
-        return condition;
+    public int getAge() {
+        return age;
     }
 
-    public void setCondition(String condition) {
-        this.condition = condition;
+    public void setAge(final int age) {
+        this.age = age;
     }
-
-    public Double getLatitude() {
-        return latitude;
-    }
-
-    public void setLatitude(Double latitude) {
-        this.latitude = latitude;
-    }
-
-    public Double getLongitude() {
-        return longitude;
-    }
-
-    public void setLongitude(Double longitude) {
-        this.longitude = longitude;
-    }
-
 }
