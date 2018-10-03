@@ -8,7 +8,8 @@ In order to build this project just run:
 	
 ## Run Locally
 
-	mvn spring-boot:run
+	mvn spring-boot:run 
+	OR 
 	mvn clean install spring-boot:run -Dserver.port=8090
 
 ## Create Docker Image
@@ -17,7 +18,21 @@ In order to build this project just run:
 	
 ## Run Docker Container
 
-	docker run -p 8080:8080 -t springio/dogs
+	docker run -p 8090:8090 -t posalabs/dogs
+
+## Push the docker image to local repository
+
+	docker tag posalabs/dogs:latest localhost:5000/posalabs/dogs:latest
+	docker push localhost:5000/posalabs/dogs:latest
+
+## Push the docker image using maven docker plugin
+
+	mvn clean package docker:build -DpushImage	
+
+## Deploy the dogs service to kubernetes
+
+	kubectl create -f deployment/deploy.yml
+	kubectl create -f deployment/svc.yml
 
 ## Steps followed
 

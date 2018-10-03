@@ -37,6 +37,10 @@
                 <buildArgs>
                     <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
                 </buildArgs>
+                <imageTags>
+                    <imageTag>${docker.image.prefix}/${project.artifactId}</imageTag>
+                    <imageTag>latest</imageTag>
+                </imageTags>
             </configuration>
         </plugin>
         <plugin>

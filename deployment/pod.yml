@@ -8,4 +8,4 @@ spec:
     image: localhost:5000/posalabs/dogs:latest
     imagePullPolicy: Never
     ports:
-    - containerPort: 8080
+    - containerPort: 8090
